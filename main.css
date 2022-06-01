@@ -549,20 +549,20 @@ table td:nth-child(3) {
 }
 
 .loader-spinner {
-  position: absolute;
-  content: '';
-  width: 7vw;
-  height: 7vw;
-  left: 33%;
-  top: 38%;
-  border-radius: 50%;
-  z-index: 3;
-  border: 6px solid transparent;
-  border-right: 6px solid #c9bc318f;
-  animation-name: spin;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 70px;
+    left: 40%;
+    top: 38%;
+    border-radius: 50%;
+    z-index: 3;
+    border: 6px solid transparent;
+    border-right: 6px solid #c9bc318f;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 @keyframes spin {
   from {
