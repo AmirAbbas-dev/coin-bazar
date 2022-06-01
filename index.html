@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="menu-mobile">
+       
+        <a href="#menu"><i class="fas fa-home"></i><p>خانه</p></a>
+        <a href="#coinListPoint"><i class="fas fa-chart-bar "></i><p>بازار</p></a>
+        <a href="#marketBox"><i class="fas fa-shopping-cart " ></i><p>مارکت</p></a>
+        <a href="#wallet"><i class="fas fa-wallet"></i><p>کیف پول</p></a>
+      </div>
+      <div class="modal-coinlist">
+        <div class="modal-header">
+          <span>ارز را انتخاب کنید</span>
+          <a id="close-modal" onclick="closeModal()">&times;</a>
+        </div>
+        <ul class="modal-list"></ul>
+      </div>
+      <div class="landing-mainpage" id="menu">
+        <div class="landing-content">
+          <h1>کوین بازار</h1>
+          <p class="name-brand">خرید آسان ارزهای دیجیتال</p>
+          <p>معامله ارز های دیجیتال تنها با چند کلیک بدون نیاز به احراز هویت</p>
+          <a class="btn btn-border" href="#coinListPoint">مشاهده لیست ارزها</a>
+          <a class="btn btn-color" href="#marketBox">خرید و فروش</a>
+        </div>
+        <div class="landing-image">
+          <img src="Img/crypto-atm-machine-4292746-3562233+(1).webp " alt="" />
+        </div>
+      </div>
+      <div class="table-outer" id="coinListPoint">
+        <table class="coin-list">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ارز</th>
+              <th></th>
+              <th>قیمت</th>
+              <th>تغییرات قیمتی</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="market" id="marketBox">
+        <div class="swap-box">
+          <div class="tab-market">
+            <span id="buy-tab">خرید</span>
+            <span id="sell-tab">فروش</span>
+          </div>
+          <div class="insert-coin">
+            <div class="coin-input">
+              <input
+                type="text"
+                onkeyup="updateRialPrice(this.value)"
+                class="input"
+                id="valueOrder"
+              />
+              <i
+                id="openListCoin"
+                onclick="openModal()"
+                class="coin-select fas fa-caret-down"
+                id="coinList"
+              ></i>
+              <span id="coinName">BTC</span>
+              <img
+                class="coin-icon"
+                id="coinIconSwap"
+                src="Img/bitcoin.png"
+                alt="coin icon"
+              />
+            </div>
+
+            <img
+              src="Img/swap.png"
+              class="swap-icon"
+              onclick="changeMarket()"
+            />
+
+            <div class="rial-input">
+              <input type="text" id="priceRialiOrder" readonly />
+              <span>RIAL</span>
+              <img class="coin-icon" src="Img/iran.svg" alt="coin icon" />
+            </div>
+          </div>
+
+          <div class="insert-order">
+            <div>
+              <span id="coin-name">قیمت لحظه ای</span>
+              <span id="coinPriceSwap"></span>
+            </div>
+            <button onclick="addOrder()">ثبت سفارش</button>
+          </div>
+        </div>
+        <ul class="order-list">
+          <div class="loader-block"></div>
+          <div class="loader-spinner"></div>
+          <li class="header-order"><span>مقدار</span><span>قیمت</span></li>
+          <li onclick="setOrderToSwap(1.51,29997)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(145, 46, 46, 0.68) 75.5%,
+                  transparent 0%
+                );
+              "
+              >1.51</span
+            ><span class="price-order red-text">29997</span>
+          </li>
+          <li onclick="setOrderToSwap(1.056,29998)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(145, 46, 46, 0.68) 52.8%,
+                  transparent 0%
+                );
+              "
+              >1.056</span
+            ><span class="price-order red-text">29998</span>
+          </li>
+          <li onclick="setOrderToSwap(1.968,29999)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(145, 46, 46, 0.68) 98.4%,
+                  transparent 0%
+                );
+              "
+              >1.968</span
+            ><span class="price-order red-text">29999</span>
+          </li>
+          <li onclick="setOrderToSwap(1.322,30000)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(145, 46, 46, 0.68) 66.1%,
+                  transparent 0%
+                );
+              "
+              >1.322</span
+            ><span class="price-order red-text">30000</span>
+          </li>
+          <li onclick="setOrderToSwap(0.621,30001)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(145, 46, 46, 0.68) 31.05%,
+                  transparent 0%
+                );
+              "
+              >0.621</span
+            ><span class="price-order red-text">30001</span>
+          </li>
+          <li class="order-center"><span>30002</span></li>
+          <li onclick="setOrderToSwap(1.578,30002)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(45, 124, 35, 0.6) 78.9%,
+                  transparent 0%
+                );
+              "
+              >1.578</span
+            ><span class="price-order green-text">30002</span>
+          </li>
+          <li onclick="setOrderToSwap(1.688,30003)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(45, 124, 35, 0.6) 84.4%,
+                  transparent 0%
+                );
+              "
+              >1.688</span
+            ><span class="price-order green-text">30003</span>
+          </li>
+          <li onclick="setOrderToSwap(0.847,30004)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(45, 124, 35, 0.6) 42.35%,
+                  transparent 0%
+                );
+              "
+              >0.847</span
+            ><span class="price-order green-text">30004</span>
+          </li>
+          <li onclick="setOrderToSwap(0.354,30005)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(45, 124, 35, 0.6) 17.7%,
+                  transparent 0%
+                );
+              "
+              >0.354</span
+            ><span class="price-order green-text">30005</span>
+          </li>
+          <li onclick="setOrderToSwap(0.564,30006)" class="order-item">
+            <span
+              style="
+                background: linear-gradient(
+                  to left,
+                  rgba(45, 124, 35, 0.6) 28.2%,
+                  transparent 0%
+                );
+              "
+              >0.564</span
+            ><span class="price-order green-text">30006</span>
+          </li>
+        </ul>
+      </div>
+      <div class="user-orderlist">
+        <table>
+          <thead>
+            <th></th>
+            <th>ارز</th>
+            <th></th>
+            <th>(مقدار)سفارش</th>
+            <th>تکمیل شده(مقدار)</th>
+            <th>قیمت</th>
+            <th>تاریخ</th>
+            <th></th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <br />
+      <div class="wallet" >
+        <div class="amount-display">
+          <!--<img src="Img/wallet.png" alt="" />-->
+
+          <div class="circle-amount" id="circleAmount"></div>
+  
+          <div class="amount-present">
+            <div>
+              <div></div>
+              <span>BTC</span>
+            </div>
+            <div>
+              <div></div>
+              <span>BNB</span>
+            </div>
+            <div>
+              <div></div>
+              <span>ETH</span>
+            </div>
+            <div>
+              <div></div>
+              <span>BCH</span>
+            </div>
+          </div>
+        </div>
+        <div class="amount-label" id="wallet"></div>
+      </div>
+<div class="footer"></div>
+     
+      <!--<div class="amount-presentbox">
+              <div class="amount-present">
+                  <div><span>btc</span><span>20%</span></div>
+                  <div><span>bnb</span><span>30</span></div>
+                  <div><span>bsc</span><span>2</span></div>
+                  <div><span>bnb</span><span>2</span></div>
+              </div>
+            
+        </div>-->
+    </main>
+    <script
+      src="https://kit.fontawesome.com/088d260400.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="Js/getprice.js"></script>
+    <script src="Js/app.js"></script>
+  </body>
+</html>
