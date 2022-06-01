@@ -551,9 +551,9 @@ table td:nth-child(3) {
 .loader-spinner {
     position: absolute;
     content: '';
-    width: 70px;
+width: 70px;
     height: 70px;
-    left: 40%;
+    left: 38%;
     top: 38%;
     border-radius: 50%;
     z-index: 3;
