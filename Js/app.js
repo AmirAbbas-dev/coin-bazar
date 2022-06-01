@@ -380,7 +380,7 @@ function addOrder() {
     let state = false;
     let sumOrderValue = 0;
     let coinBalance = 0;
-    debugger;
+   
     if (marketState == "sell" ) {
       listOrder.forEach((item) => {
         if (marketState == item.orderType) {
