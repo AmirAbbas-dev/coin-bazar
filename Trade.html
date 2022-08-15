@@ -238,8 +238,10 @@
   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
   <script type="text/javascript">
     let theme = localStorage.getItem('theme');
-     let coinSelected = localStorage.getItem("selectedCoin") != "" ?  localStorage.getItem("selectedCoin") : "BTC_USDT";
-     let chartSymbol =  `GATEIO:${coinSelected.replace("_","")}`;
+    let coinSelected =
+    localStorage.getItem("selectedCoin") ?  localStorage.getItem("selectedCoin") :  "BTC_USDT";
+     let chartSymbol =  `GATEIO:${ coinSelected.replace("_","")}`;
+     console.log(coinSelected);
       new TradingView.widget({
         "autosize": true,
         "symbol": chartSymbol,
