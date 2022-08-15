@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <main>
-      <div class="menu-mobile">
-       
-        <a href="#menu"><i class="fas fa-home"></i><p>خانه</p></a>
-        <a href="#coinListPoint"><i class="fas fa-chart-bar "></i><p>بازار</p></a>
-        <a href="#marketBox"><i class="fas fa-shopping-cart " ></i><p>مارکت</p></a>
-        <a href="#wallet"><i class="fas fa-wallet"></i><p>کیف پول</p></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Css/main.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="top-header"></div>
+  <header>
+
+    <div class="top-menu">
+      <img src="Img/xt.png" alt="" />
+      <nav>
+        <ul>
+          <li class="nav-item"><a href="index.html">صفحه اصلی</a></li>
+          <li class="nav-item"><a href="MapMarket.html">نقشه بازار</a></li>
+          <li class="nav-item"><a href="Trade.html">معامله</a></li>
+          <li class="nav-item"><a href="Wallet.html">کیف پول</a></li>
+        </ul>
+      </nav>
+      <div class="menu-options">
+        <a href="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" class="v-icon__svg"
+            style="font-size: 36px; height: 36px; width: 36px">
+            <path
+              d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z">
+            </path>
+          </svg>
+        </a>
+        <a href="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" class="v-icon__svg"
+            style="font-size: 36px; height: 36px; width: 36px" data-darkreader-inline-fill="">
+            <path
+              d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"
+              data-darkreader-inline-fill=""></path>
+          </svg>
+        </a>
+        <a href="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" class="v-icon__svg"
+            style="font-size: 36px; height: 36px; width: 36px">
+            <path
+              d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z">
+            </path>
+          </svg>
+        </a>
+        <a class="thead-toggle" href="javascript:toggleTheme()">
+          <i class="fa fa-moon-o" ></i>
+        </a>
       </div>
-      <div class="modal-coinlist">
-        <div class="modal-header">
-          <span>ارز را انتخاب کنید</span>
-          <a id="close-modal" onclick="closeModal()">&times;</a>
-        </div>
-        <ul class="modal-list"></ul>
-      </div>
+    </div>
+
+  </header>
+  <div class="margin-top"></div>
+
+  <section>
+    <div class="container">
       <div class="landing-mainpage" id="menu">
         <div class="landing-content">
+          <span>بازار معاملاتی</span>
           <h1>کوین بازار</h1>
           <p class="name-brand">خرید آسان ارزهای دیجیتال</p>
-          <p>معامله ارز های دیجیتال تنها با چند کلیک بدون نیاز به احراز هویت</p>
-          <a class="btn btn-border" href="#coinListPoint">مشاهده لیست ارزها</a>
-          <a class="btn btn-color" href="#marketBox">خرید و فروش</a>
+          <p>
+            معامله ارز های دیجیتال تنها با چند کلیک سریع و امن با بهره گیری
+            از آخرین فناوری های بروز دنیا بدون واسطه و محدودیت با پشتیبانی
+            24 ساعته
+          </p>
+          <a class="btn btn-border" href="#coinListPoint">مشاهده لیست ارزها
+          </a>
+          <a class="btn btn-color" href="Trade.html">خرید و فروش</a>
         </div>
         <div class="landing-image">
-          <img src="Img/crypto-atm-machine-4292746-3562233+(1).webp " alt="" />
+          <div class="parent-orbit">
+            <div class="orbit"></div>
+          </div>
+
+          <div class="landing-logo">
+            <img src="Img/xt.png" alt="" />
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
       <div class="table-outer" id="coinListPoint">
         <table class="coin-list">
           <thead>
@@ -43,252 +94,272 @@
               <th>#</th>
               <th>ارز</th>
               <th></th>
-              <th>قیمت</th>
+              <th>قیمت(دلار)</th>
+              <th>قیمت(تومان)</th>
               <th>تغییرات قیمتی</th>
               <th></th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody>
+            <tr class="coin-item" data-coin-name="BTC_USDT" data-request-id="1">
+              <td>1</td>
+              <td><img src="Img/bitcoin.png" alt=""></td>
+              <td>بیتکوین</td>
+              <td class="coin-price-dollar"></td>
+              <td class="coin-price-toman"></td>
+              <td class="coin-present"></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+            <tr class="coin-item" data-coin-name="BNB_USDT" data-request-id="3">
+              <td>2</td>
+              <td><img src="Img/binancecoin.png" alt=""></td>
+              <td>بایننس</td>
+              <td class="coin-price-dollar"></td>
+              <td class="coin-price-toman"></td>
+              <td id="coin-present" class="coin-present"></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+            <tr class="coin-item" data-coin-name="ETH_USDT" data-request-id="2">
+              <td>3</td>
+              <td><img src="Img/ethereum.png" alt=""></td>
+              <td>اتریوم</td>
+              <td class="coin-price-dollar"></td>
+              <td class="coin-price-toman"></td>
+              <td id="coin-present" class="coin-present"></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+            <tr class="coin-item" data-coin-name="BCH_USDT" data-request-id="4">
+              <td>4</td>
+              <td><img src="Img/bitcoin-cash.png" alt=""></td>
+              <td>بیتکوین کش</td>
+              <td class="coin-price-dollar"></td>
+              <td class="coin-price-toman"></td>
+              <td class="coin-present"></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+            <tr class="coin-item" data-coin-name="ADA_USDT" data-request-id="5">
+              <td>5</td>
+              <td><img src="Img/cardano.png" alt=""></td>
+              <td>کاردانو</td>
+              <td class="coin-price-dollar"></td>
+              <td class="coin-price-toman"></td>
+              <td id="coin-present" class="coin-present"></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+          </tbody>
         </table>
       </div>
-      <div class="market" id="marketBox">
-        <div class="swap-box">
-          <div class="tab-market">
-            <span id="buy-tab">خرید</span>
-            <span id="sell-tab">فروش</span>
-          </div>
-          <div class="insert-coin">
-            <div class="coin-input">
-              <input
-                type="text"
-                onkeyup="updateRialPrice(this.value)"
-                class="input"
-                id="valueOrder"
-              />
-              <i
-                id="openListCoin"
-                onclick="openModal()"
-                class="coin-select fas fa-caret-down"
-                id="coinList"
-              ></i>
-              <span id="coinName">BTC</span>
-              <img
-                class="coin-icon"
-                id="coinIconSwap"
-                src="Img/bitcoin.png"
-                alt="coin icon"
-              />
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="step-title">
+        <h4>برترین ویژگی های کوین بازار</h4>
+        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-light-1etrg7" focusable="false" aria-hidden="true"
+          viewBox="0 0 24 24">
+          <path d="M10.5 3l-3 5h7L11 20.5 21 8l-4-5h-6.5z" fill="#FDD835"></path>
+          <path
+            d="M23 8a.692.692 0 00-.131-.403l-3.91-5.333A.644.644 0 0018.445 2H5.555a.644.644 0 00-.514.264l-3.91 5.333a.684.684 0 00.011.82l10.356 13.334A.64.64 0 0012 22a.64.64 0 00.502-.25L22.858 8.419A.692.692 0 0023 8zM5.442 3.924l1.648 3.41H2.942l2.5-3.41zM15 8.667L12 19.013 9 8.667h6zM9.42 7.333L12 3.778l2.578 3.555H9.422zm3.868-4h4.114l-1.646 3.404-2.468-3.404zM8.243 6.737L6.598 3.333h4.113L8.243 6.737zm-.59 1.93l2.78 9.585L2.99 8.667h4.664zm8.694 0h4.664l-7.444 9.585 2.78-9.585zm.563-1.334l1.648-3.41 2.5 3.41H16.91z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+      <div class="step-info">
+        <div class="step-card">
+          <div>
+            <span>احراز هویت سریع</span>
+            <div class="step-image">
+              <img src="Img/user-svgrepo-com.svg" alt="" />
             </div>
 
-            <img
-              src="Img/swap.png"
-              class="swap-icon"
-              onclick="changeMarket()"
-            />
+          </div>
 
-            <div class="rial-input">
-              <input type="text" id="priceRialiOrder" readonly />
-              <span>RIAL</span>
-              <img class="coin-icon" src="Img/iran.svg" alt="coin icon" />
+          <p>
+            فرآیند احراز هویت به گونه ای است که در کوتاه ترین زمان ممکن
+            امکان خرید و فروش را خواهید داشت
+          </p>
+        </div>
+        <div class="step-card">
+          <div>
+            <span>پرداخت آنلاین وجه</span>
+            <div class="step-image">
+              <img src="Img/shopping-cart-supermarket-svgrepo-com.svg" alt="" />
             </div>
           </div>
 
-          <div class="insert-order">
-            <div>
-              <span id="coin-name">قیمت لحظه ای</span>
-              <span id="coinPriceSwap"></span>
+          <p>
+            امکان پرداخت آنلاین از طریق کارت های بانکی عضو شتاب را دارد.
+            پرداخت آسان، مطمئن و سریع
+          </p>
+        </div>
+        <div class="step-card">
+          <div>
+            <span>بازار معاملاتی متنوع</span>
+            <div class="step-image">
+              <img src="Img/coin-svgrepo-com.svg" alt="" />
             </div>
-            <button onclick="addOrder()">ثبت سفارش</button>
+          </div>
+          <p>
+            امکان خرید و فروش با ریال و تتر با کمترین کارمزد و را برای
+            کاربران به وجود آورده است
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="statistics">
+        <div class="statistics-item">
+          <span>200+ هزار</span>
+          <span>کاربر</span>
+        </div>
+        <div class="statistics-item">
+          <span>100+ هزار</span>
+          <span>تراکنش موفق</span>
+        </div>
+
+        <div class="statistics-image"><img src="Img/xt.png" alt=""></div>
+        <div class="statistics-item">
+          <span>150+ میلیون</span>
+          <span>حجم تراکنش</span>
+        </div>
+        <div class="statistics-item">
+          <span>50+ هزار</span>
+          <span>کاربر فعال</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section>
+    <div class="container">
+      <div class="app-box">
+        <div class="app-title">
+          <h4>همه ابزار ها در یک اپلیکیشن !</h4>
+
+          <p>
+            اپلیکیشن کوین بازار ، آسان‌ترین و در دسترس‌ترین راه برای مبادله
+            مستقیم ارزهای دیجیتال
+          </p>
+          <div class="app-download">
+            <a href="">
+              <img src="Img/bazaar.png" alt="" />
+            </a>
+            <a href="">
+              <img src="Img/google-play-badge.png" alt="" />
+            </a>
+
           </div>
         </div>
-        <ul class="order-list">
-          <div class="loader-block"></div>
-          <div class="loader-spinner"></div>
-          <li class="header-order"><span>مقدار</span><span>قیمت</span></li>
-          <li onclick="setOrderToSwap(1.51,29997)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(145, 46, 46, 0.68) 75.5%,
-                  transparent 0%
-                );
-              "
-              >1.51</span
-            ><span class="price-order red-text">29997</span>
-          </li>
-          <li onclick="setOrderToSwap(1.056,29998)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(145, 46, 46, 0.68) 52.8%,
-                  transparent 0%
-                );
-              "
-              >1.056</span
-            ><span class="price-order red-text">29998</span>
-          </li>
-          <li onclick="setOrderToSwap(1.968,29999)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(145, 46, 46, 0.68) 98.4%,
-                  transparent 0%
-                );
-              "
-              >1.968</span
-            ><span class="price-order red-text">29999</span>
-          </li>
-          <li onclick="setOrderToSwap(1.322,30000)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(145, 46, 46, 0.68) 66.1%,
-                  transparent 0%
-                );
-              "
-              >1.322</span
-            ><span class="price-order red-text">30000</span>
-          </li>
-          <li onclick="setOrderToSwap(0.621,30001)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(145, 46, 46, 0.68) 31.05%,
-                  transparent 0%
-                );
-              "
-              >0.621</span
-            ><span class="price-order red-text">30001</span>
-          </li>
-          <li class="order-center"><span>30002</span></li>
-          <li onclick="setOrderToSwap(1.578,30002)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(45, 124, 35, 0.6) 78.9%,
-                  transparent 0%
-                );
-              "
-              >1.578</span
-            ><span class="price-order green-text">30002</span>
-          </li>
-          <li onclick="setOrderToSwap(1.688,30003)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(45, 124, 35, 0.6) 84.4%,
-                  transparent 0%
-                );
-              "
-              >1.688</span
-            ><span class="price-order green-text">30003</span>
-          </li>
-          <li onclick="setOrderToSwap(0.847,30004)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(45, 124, 35, 0.6) 42.35%,
-                  transparent 0%
-                );
-              "
-              >0.847</span
-            ><span class="price-order green-text">30004</span>
-          </li>
-          <li onclick="setOrderToSwap(0.354,30005)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(45, 124, 35, 0.6) 17.7%,
-                  transparent 0%
-                );
-              "
-              >0.354</span
-            ><span class="price-order green-text">30005</span>
-          </li>
-          <li onclick="setOrderToSwap(0.564,30006)" class="order-item">
-            <span
-              style="
-                background: linear-gradient(
-                  to left,
-                  rgba(45, 124, 35, 0.6) 28.2%,
-                  transparent 0%
-                );
-              "
-              >0.564</span
-            ><span class="price-order green-text">30006</span>
-          </li>
-        </ul>
+        <img src="Img/mobile.avif" alt="" />
       </div>
-      <div class="user-orderlist">
-        <table>
-          <thead>
-            <th></th>
-            <th>ارز</th>
-            <th></th>
-            <th>(مقدار)سفارش</th>
-            <th>تکمیل شده(مقدار)</th>
-            <th>قیمت</th>
-            <th>تاریخ</th>
-            <th></th>
-          </thead>
-          <tbody></tbody>
-        </table>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="cta-box">
+        <h3>فقط یک قدم تا اولین معامله خود فاصله دارید</h3>
+        <div class="fast-signin">
+          <form action="">
+            <input type="text" placeholder="ایمیل خود را وارد کنید .." />
+            <button class="btn btn-color" type="submit">ثبت نام</button>
+          </form>
+        </div>
       </div>
-      <br />
-      <div class="wallet" >
-        <div class="amount-display">
-          <!--<img src="Img/wallet.png" alt="" />-->
+    </div>
+  </section>
+  <div class="menu-mobile">
+    <a href="index.html">
+      <i class="fas fa-home"></i>
+      <p>صفحه اصلی</p>
+    </a>
+    <a href="Trade.html">
+      <i class="fas fa-chart-bar"></i>
+      <p>معامله</p>
+    </a>
+    <a href="Market.html">
+      <i class="fas fa-shopping-cart"></i>
+      <p>مارکت</p>
+    </a>
+    <a href="Wallet.html">
+      <i class="fas fa-wallet"></i>
+      <p>کیف پول</p>
+    </a>
+  </div>
 
-          <div class="circle-amount" id="circleAmount"></div>
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="footer-description">
+          <img src="Img/xt.png" alt="">
+          <p>پلتفرم معاملاتی تبدیل مکانی امن و مطمئن برای خرید و فروش آنلاین ارز‌های دیجیتال می‌باشد. تبدیل یک صرافی
+            آنلاین برای خرید و فروش بیت کوین و تبادل سایر ارزهای دیجیتال به صورت تخصصی می‌باشد.</p>
+          <div class="social-media">
+            <h4>
+              در شبکه‌های اجتماعی ما را دنبال کنید!</h4>
+            <ul>
+              <li>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true"
+                    class="v-icon__svg" style="font-size: 36px; height: 36px; width: 36px">
+                    <path
+                      d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z">
+                    </path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true"
+                    class="v-icon__svg" style="font-size: 36px; height: 36px; width: 36px"
+                    data-darkreader-inline-fill="">
+                    <path
+                      d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"
+                      data-darkreader-inline-fill=""></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true"
+                    class="v-icon__svg" style="font-size: 36px; height: 36px; width: 36px">
+                    <path
+                      d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z">
+                    </path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
   
-          <div class="amount-present">
-            <div>
-              <div></div>
-              <span>BTC</span>
-            </div>
-            <div>
-              <div></div>
-              <span>BNB</span>
-            </div>
-            <div>
-              <div></div>
-              <span>ETH</span>
-            </div>
-            <div>
-              <div></div>
-              <span>BCH</span>
-            </div>
+          <div class="footer-link">
+            <h3>لینک های مفید</h3>
+            <ul>
+              <li><a href="index.html">صفحه اصلی</a></li>
+              <li><a href="MapMarket.html">نقشه بازار </a></li>
+              <li><a href="Trade.html">معامله </a></li>
+              <li><a href="Wallet.html">کیف پول </a></li>
+            </ul>
           </div>
-        </div>
-        <div class="amount-label" id="wallet"></div>
+          <div class="footer-image">
+            <img src="/Img/1.svg" alt="">
+            <img src="Img/enamad_icon_text_color_blue_1024-150x150-1.png" alt="">
+          </div>
+       
       </div>
-<div class="footer"></div>
-     
-      <!--<div class="amount-presentbox">
-              <div class="amount-present">
-                  <div><span>btc</span><span>20%</span></div>
-                  <div><span>bnb</span><span>30</span></div>
-                  <div><span>bsc</span><span>2</span></div>
-                  <div><span>bnb</span><span>2</span></div>
-              </div>
-            
-        </div>-->
-    </main>
-    <script
-      src="https://kit.fontawesome.com/088d260400.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="Js/getprice.js"></script>
-    <script src="Js/app.js"></script>
-  </body>
+    </div>
+    <p class="policy">© تمام حقوق مادی و معنوی این سایت متعلق به کوین بازار است.</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/088d260400.js" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="Js/main.js"></script>
+  <script src="Js/app.js"></script>
+</body>
+
 </html>
