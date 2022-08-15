@@ -1,3 +1,4 @@
+ 
 let socketRequestId = {
   addOrder: 1,
   updateOrder: 2,
@@ -5,13 +6,12 @@ let socketRequestId = {
 let socketTrade = new WebSocket("wss://ws.gate.io/v3/");
 let marketState = "buy";
 
-updateUserOrderList();
-Updateswap();
+
 socketTrade.onopen = () => {
+   
   let coinSelected =
-    localStorage.getItem("selectedCoin") != ""
-      ? localStorage.getItem("selectedCoin")
-      : "BTC_USDT";
+    localStorage.getItem("selectedCoin") ?  localStorage.getItem("selectedCoin") :  "BTC_USDT";
+  
   socketTrade.send(
     `{"id":1, "method":"depth.query", "params":["${coinSelected}", 5, "0.0001"]}`
   );
@@ -22,6 +22,10 @@ socketTrade.onopen = () => {
     `{"id":3,"method":"ticker.subscribe","params":["BTC_USDT","ETH_USDT","BCH_USDT","BNB_USDT","ADA_USDT" ,86400]}`
   );
 };
+
+updateUserOrderList();
+Updateswap();
+
 socketTrade.onmessage = (res) => {
   jsonResponse = JSON.parse(res.data);
 
@@ -237,13 +241,13 @@ $(".coin-modal-item").click(function () {
 
 function Updateswap() {
   let coinSelected =
-    localStorage.getItem("selectedCoin") != ""
+    localStorage.getItem("selectedCoin") 
       ? localStorage.getItem("selectedCoin")
       : "BTC_USDT";
   let coinSelectedIcon = $(
     `.coin-modal-item[data-coin-symbol="${coinSelected}"] img`
   ).attr("src");
-  let chartSymbol = `GATEIO:${coinSelected.replace("_", "")}`;
+  
   $("#coinIconSwap").attr("src", coinSelectedIcon);
   $("#coinName").text(coinSelected.substring(0, 3));
 }
