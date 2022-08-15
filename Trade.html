@@ -241,7 +241,7 @@
     let coinSelected =
     localStorage.getItem("selectedCoin") ?  localStorage.getItem("selectedCoin") :  "BTC_USDT";
      let chartSymbol =  `GATEIO:${ coinSelected.replace("_","")}`;
-     console.log(coinSelected);
+     
       new TradingView.widget({
         "autosize": true,
         "symbol": chartSymbol,
