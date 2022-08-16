@@ -98,6 +98,7 @@ function createChart() {
             cutout: "80%"
           }]},
           options: {
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
                     display: false

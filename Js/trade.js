@@ -300,7 +300,7 @@ function addOrder() {
     });
     return;
   }
-  debugger
+   
   if (marketState == "sell") {
     
     if (userBalance[coinNameEn] < value) {
@@ -356,22 +356,24 @@ function cancelOrder(orderElement) {
 function updateUserOrderList() {
   let orderList = JSON.parse(localStorage.getItem("listOrder"));
   let orderElements = "";
-
-  for (const order of orderList) {
-    if (order.type == marketState) {
-      orderElements += ` <tr class="user-order">
-        <td></td>
-        <td> <img src="${order.coinIcon}" alt="" class="coin-icon"></td>
-        <td class="coin-name">${order.coinName}</td>
-        <td class="coin-amountorder">${order.value}</td>
-        <td class="coin-amountdone">${order.amountDone}</td>
-        <td class="coin-price">${order.price}</td>
-        <td class="coin-date">${gatPersianDate(new Date())}</td>
-        <td><a class="btn cancel-order" onclick="cancelOrder(this)">لغو سفارش</a></td>
-      </tr >`;
+   if (orderList) {
+    for (const order of orderList) {
+      if (order.type == marketState) {
+        orderElements += ` <tr class="user-order">
+          <td></td>
+          <td> <img src="${order.coinIcon}" alt="" class="coin-icon"></td>
+          <td class="coin-name">${order.coinName}</td>
+          <td class="coin-amountorder">${order.value}</td>
+          <td class="coin-amountdone">${order.amountDone}</td>
+          <td class="coin-price">${order.price}</td>
+          <td class="coin-date">${gatPersianDate(new Date())}</td>
+          <td><a class="btn cancel-order" onclick="cancelOrder(this)">لغو سفارش</a></td>
+        </tr >`;
+      }
     }
-  }
-  $(".user-orderlist tbody").html(orderElements);
+    $(".user-orderlist tbody").html(orderElements);
+   }
+ 
 }
 
 
@@ -384,32 +386,4 @@ function gatPersianDate(date) {
   };
   return date.toLocaleDateString("fa-IR", option);
 }
-
-function name(params) {
-  let state = false;
-  let sumOrderValue = 0;
-  let coinBalance = 0;
-
-  if (marketState == "sell") {
-    listOrder.forEach((item) => {
-      if (marketState == item.type) {
-        sumOrderValue += item.value;
-      }
-    });
-    listCoin.forEach((valueCoin, index) => {
-      if (valueCoin.coinNameEn == coinName) {
-        coinBalance = valueCoin.userBalance;
-      }
-    });
-    if (sumOrderValue > coinBalance) {
-      Swal.fire({
-        text: `مقدار سفارش از موجودی شما بیشتر است `,
-        padding: `1em`,
-        background: `#393a3f`,
-        color: `#e7ffff`,
-        confirmButtonText: `تلاش مجدد`,
-      });
-      return;
-    }
-  }
-}
+ 
