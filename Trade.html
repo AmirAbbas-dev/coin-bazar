@@ -126,13 +126,7 @@
        
       </ul>
     </div>
-    <section>
-      <div class="container">
-   
-       
-     
-      </div>
-    </section>
+  
 
     <section>
       <div class="container">
@@ -168,10 +162,8 @@
           </div>
           <div class="tradingview-widget-container">
             <div id="tradingview_83dc2"></div>
+           
           </div>
-         
-        </div>
-        <div class="market">
           <ul class="order-list">
             <div class="loader">
               <div class="loader-block"></div>
@@ -204,23 +196,28 @@
             </table>
           </div>
         </div>
-     
       </div>
     </section>
+    <a class="bottom-toggle" href="javascript:toggleTheme()">
+      <i class="fa fa-moon-o" ></i>
+    </a>
+    <div class="margin-bottom"></div>
     <div class="menu-mobile">
-      <a href="index.html">
+      <a href="/index.html">
         <i class="fas fa-home"></i>
         <p>صفحه اصلی</p>
       </a>
-      <a href="Trade.html">
+      <a href="/MapMarket.html">
         <i class="fas fa-chart-bar"></i>
+        <p>نقشه بازار</p>
+      </a>
+      <a href="/Trade.html">
+      
+        <i class="fas fa-shopping-cart"></i>
         <p>معامله</p>
       </a>
-      <a href="Market.html">
-        <i class="fas fa-shopping-cart"></i>
-        <p>مارکت</p>
-      </a>
-      <a href="Wallet.html">
+     
+      <a href="/Wallet.html">
         <i class="fas fa-wallet"></i>
         <p>کیف پول</p>
       </a>
@@ -241,7 +238,7 @@
     let coinSelected =
     localStorage.getItem("selectedCoin") ?  localStorage.getItem("selectedCoin") :  "BTC_USDT";
      let chartSymbol =  `GATEIO:${ coinSelected.replace("_","")}`;
-     
+     console.log(coinSelected);
       new TradingView.widget({
         "autosize": true,
         "symbol": chartSymbol,

@@ -213,10 +213,22 @@ nav ul li:hover a::before{
   color: var(--yellow-color);
 }
 .thead-toggle{
+  margin-right: 10px;
   font-size: 1.9rem;
   opacity: .6;
   vertical-align: middle;
   transition: all .5s;
+  position: relative;
+}
+.thead-toggle:after{
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 30px;
+  top: 4px;
+  right: -8px;
+  opacity: .3;
+  background-color: var(--black-color);
 }
 .social-media{
   margin: 10px 0;
@@ -348,28 +360,44 @@ nav ul li:hover a::before{
   margin: 50px auto;
   width: 85%;
   border-spacing: 0px;
-  border-collapse: separate;
+  border-collapse: collapse;
   background-color: var(--white-light-color);
   border-top: 5px solid var(--yellow-color);
   border-radius: 12px;
   box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 10%);
 
 }
-.coin-list td:nth-child(2),.amount-display td:nth-child(2) {
+.coin-item-sub{
+  border-bottom: 1px solid #c9bc316b;
+  display: none;
+}
+.coin-item-sub.active {
+  display: table-row;
+}
+.coin-item-sub td {
+  padding: 0 0 15px;
+}
+.toggle-row{
+  display: none;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--yellow-color-secondary);
+}
+.coin-list .coin-item td:nth-child(2),.amount-display td:nth-child(2) {
   width: 50px;
   padding: 10px 5px 0;
 }
-.coin-list td:nth-child(3) ,.amount-display td:nth-child(3) {
+.coin-list .coin-item td:nth-child(3) ,.amount-display td:nth-child(3) {
   text-align: right;
 }
 .coin-item td img{
-  width: 80%;
+  width: 50px;
 }
 .coin-list::before{
   content: "";
   position: absolute;
-  left: -50px;
-  width: 105%;
+  left: 0px;
+  width: 100%;
   height: 75px;
   z-index: -1;
   border: 53px solid var(--yellow-color);
@@ -409,7 +437,7 @@ table tbody tr{
   border-radius: 5px;
   backdrop-filter: blur(5px);
   padding: 15px 0;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 .tab-market {
   width: 70%;
@@ -628,6 +656,7 @@ table tbody tr{
 .order-list {
   display: flex;
   flex-basis: 350px;
+  flex-grow: 0;
   height: 363px;
   flex-flow: column nowrap;
   position: relative;
@@ -749,7 +778,8 @@ width: 70px;
   }
 }
 .user-orderlist{
-  width: 800px;
+  align-self: self-start;
+   width: 800px;
   max-height: 355px;
   height: 350px;
   overflow-x: auto;
@@ -845,6 +875,9 @@ width: 70px;
     max-width: 260px;
      height: 260px;
   }
+  .margin-bottom{
+    height: 90px;
+  }
 .menu-mobile{
   position: fixed;
   width: 100%;
@@ -869,6 +902,9 @@ width: 70px;
 .menu-mobile a{
   text-align: center;
 }
+.menu-mobile a.active p::before{
+  transform: scaleX(1);
+}
 .menu-mobile i{
   color: var(--yellow-color);
   font-size: 1.6em;
@@ -882,9 +918,9 @@ width: 70px;
 .menu-mobile a p::before{
   position: absolute;
   content: "";
-  left: -20%;
-  bottom: -20px;
-  width: 140%;
+  left: 0;
+  top: -42px;
+  width: 100%;
   transition: all .5s;
   transform: scaleX(0);
   height: 5px;
@@ -892,16 +928,13 @@ width: 70px;
   background-color: var(--yellow-color);
 
 }
-.menu-mobile a:hover p::before{
-  transform: scaleX(1);
-
-}
-.step-title{
+ 
+.step-title,.statistics-title{
   text-align: center;
   font-size: 22px;
 }
 .step-info{
-  margin: 100px 0;
+  margin: 60px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -966,11 +999,14 @@ border-radius: 12px;
   content: "3";
 }
 
+.statistics-title img{
+  width: 30px;
+}
 .statistics{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 150px 0 50px;
+  margin: 130px 0 50px;
   background-color: var(--color-white);
   height: 100px;
   border-radius: 10px 10px 50px 50px ;
@@ -1009,16 +1045,17 @@ border-radius: 12px;
  
 }
 .app-box > img{
-  width: 30%;
+  width: 300px;
 }
 .app-title h4{
   font-size: 2em;
-  margin: 0 0 40px;
+  margin: 0 5px 40px;
   position: relative;
   display: inline-block;
 }
 .app-title p{
   font-size: 1.3em;
+  padding: 0 5px;
 }
 .app-title h4:before{
   content: "";
@@ -1113,9 +1150,9 @@ footer{
 .footer .social-media li a{
   display: flex;
 }
-.footer-image img{
-  width: 120px;
-  height: 120px;
+.footer-image img {
+  width: 100px;
+  height: 100px;
 }
 .footer .footer-link{
   margin-bottom: 20px;
@@ -1144,7 +1181,8 @@ footer{
 }
 .top-wallet{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -1201,9 +1239,9 @@ bottom: 0px;
   margin-top: 40px;
 }
 .amount-display{
- width: 100%;
+ width: 97%;
  max-width: 800px;
-  margin: 20px auto;
+  margin: 50px auto;
   background-color: var(--color-white);
   border-top: none;
   border-left: 5px solid var(--yellow-color);
@@ -1228,14 +1266,46 @@ bottom: 0px;
     width: 1300px;
   }
 }
+@media(max-width: 1180px){
+ .tradingview-widget-container{
+  order: 1;
+ }
+ .swap-box{
+  order: 2;
+ }
+ .order-list{
+  order: 3;
+ }
+ .user-orderlist{
+  order: 4;
+ }
+}
 @media (max-width: 830px) {
   body {
     font-size: 0.8em
   }
-  .top-menu{
+  .top-menu,.margin-top{
     display: none;
   }
-
+  .bottom-toggle{
+    margin-right: 10px;
+    font-size: 1.9rem;
+    opacity: .6;
+    vertical-align: middle;
+    transition: all .5s;
+    position: fixed;
+    bottom: 95px;
+    border-radius: 50%; 
+    background-color: var(--yellow-color);
+  }
+ 
+  .bottom-toggle i{ 
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    line-height: 50px;
+    padding: 0 10px;
+  }
   .step-card > div > span{
     font-size: .9em;
   }
@@ -1259,17 +1329,16 @@ bottom: 0px;
   .landing-image{
     margin: 50px 0 0;
   }
-  .table-outer{
-    margin: auto;
-    overflow-y: hidden;
-}
+  .statistics{
+    margin:  40px 0 80px;
+  }
 .statistics-image{
   display: none;
 }
-.coin-list{
-  overflow-x: scroll;
-  width: 530px;
+.coin-list {
+  width: 98%;
 }
+ 
  .modal-coinlist{
    margin: 0;
 
@@ -1280,7 +1349,7 @@ bottom: 0px;
   display: flex;
   justify-content: space-evenly;
 }
-
+ 
   }
 @media (max-width:650px){
   header{
@@ -1289,7 +1358,7 @@ bottom: 0px;
 
   .step-info{
     flex-direction: column;
-    margin-top: 50px;
+    
   } 
   .step-card{
     margin: 45px 0;
@@ -1301,6 +1370,9 @@ bottom: 0px;
   }
   .app-box > img{
     width: 350px;
+  }
+  .statistics-item span:nth-child(1){
+    font-size: 1.5rem;
   }
 }
 @media  (max-width: 400px){
@@ -1315,8 +1387,20 @@ bottom: 0px;
   .landing-image img {
     width: 300px;
 }
+.statistics{
+  flex-flow: wrap;
+  border-radius: 0;
+  height: 200px;
+  
+}
+.statistics-item{
+  flex-basis: 40%;
+}
+.app-download{
+  justify-content: center;
+}
 .app-download a{
-  flex-basis: 100px;
+  flex-basis: 150px;
  }
 }
 @media (max-width: 550px) {
@@ -1331,5 +1415,18 @@ bottom: 0px;
   }
   .coin-amount{
     margin-top: 20px;
+  }
+  .coin-item .coin-price-toman,
+  .coin-item .coin-present,
+  .coin-item td .btn-color,
+  .coin-list thead th:nth-child(5), 
+  .coin-list thead th:nth-child(6){
+    display: none;
+  }
+  .coin-item:hover{
+    box-shadow: none;
+  }
+  .toggle-row{
+    display: block;
   }
 }

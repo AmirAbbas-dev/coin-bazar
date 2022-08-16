@@ -1,13 +1,20 @@
 
 checkTheme();
+checkMenuMobile();
+
+function checkMenuMobile() { 
+  $(`.menu-mobile a[href="${window.location.pathname}"]`).addClass('active');
+}
 function checkTheme() {
    
   let theme = localStorage.getItem('theme');
   if (theme == "dark") {
     document.getElementsByTagName("body")[0].className = "dark-mode";
     document.querySelector(".thead-toggle i").className = "fa fa-sun-o";
+    document.querySelector(".bottom-toggle i").className = "fa fa-sun-o";
   } else {
     document.querySelector(".thead-toggle i").className = "fa fa-moon-o"
+    document.querySelector(".bottom-toggle i").className = "fa fa-moon-o";
   }
 }
 
@@ -44,14 +51,14 @@ function checkTheme() {
  }
 
 function toggleTheme() {
-  
+   
   isDarkMode = document.getElementsByTagName("body")[0].classList.toggle("dark-mode");
   if (isDarkMode) {
     localStorage.setItem("theme","dark");
-    document.querySelector(".thead-toggle i").className = "fa fa-sun-o";
+ 
     window.location.reload();
   } else {
-    document.querySelector(".thead-toggle i").className = "fa fa-moon-o";
+ 
     localStorage.setItem("theme","light");
     window.location.reload();
   }

@@ -22,7 +22,7 @@ let socketRequestId = {
       let coinData = JSON.parse(res.data).result;
       $(`[data-request-id="${JSON.parse(res.data).id}"] .coin-price-toman`).text(groupDigital((coinData.last * parseFloat(32300)).toFixed(0)))
       $(`[data-request-id="${JSON.parse(res.data).id}"] .coin-price-dollar`).text(Number(coinData.last).toFixed(3))
-      $(`[data-request-id="${JSON.parse(res.data).id}"] .coin-present`).text(coinData.change).attr("class", coinData.change > 0 ? "green-txt" : "red-txt")
+      $(`[data-request-id="${JSON.parse(res.data).id}"] .coin-present`).text(coinData.change).attr("class", coinData.change > 0 ? "coin-present green-txt" : "coin-present red-txt")
     }
     if (JSON.parse(res.data).params) 
     {
@@ -31,8 +31,12 @@ let socketRequestId = {
  
       $(`[data-coin-name="${coinName}"] .coin-price-toman`).text(groupDigital((coinData.last * parseFloat(32300)).toFixed(0)))
       $(`[data-coin-name="${coinName}"] .coin-price-dollar`).text(Number(coinData.last).toFixed(3))
-      $(`[data-coin-name="${coinName}"] .coin-present`).text(coinData.change).attr("class", coinData.change > 0 ? "green-txt" : "red-txt")
+      $(`[data-coin-name="${coinName}"] .coin-present`).text(coinData.change).attr("class", coinData.change > 0 ? "coin-present green-txt" : "coin-present red-txt")
     }
   }
  
+ function toggleSubTablleRow(tdElement){
  
+  let isActiveSubTablleRow = tdElement.parentElement.parentElement.nextElementSibling.classList.toggle("active");
+    tdElement.children[0].classList.value = isActiveSubTablleRow ? "fa-solid fa-angle-down" : "fa-solid fa-angle-left";
+ }

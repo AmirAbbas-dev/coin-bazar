@@ -87,7 +87,7 @@
   </section>
   <section>
     <div class="container">
-      <div class="table-outer" id="coinListPoint">
+     
         <table class="coin-list">
           <thead>
             <tr>
@@ -101,55 +101,93 @@
             </tr>
           </thead>
           <tbody>
+       
             <tr class="coin-item" data-coin-name="BTC_USDT" data-request-id="1">
+              
               <td>1</td>
               <td><img src="Img/bitcoin.png" alt=""></td>
               <td>بیتکوین</td>
-              <td class="coin-price-dollar"></td>
-              <td class="coin-price-toman"></td>
-              <td class="coin-present"></td>
+        <td ><p class="coin-price-dollar"></p></td>
+              <td ><p  class="coin-price-toman"></p></td>
+               <td   ><p class="coin-present"></p></td> 
+  
+              <td><span onclick="toggleSubTablleRow(this)" class="toggle-row"><i class="fa-solid fa-angle-left"></i></span></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+              <tr class="coin-item-sub  "   data-coin-name="BTC_USDT" data-request-id="1">
+              <td></td>
+                    <td ><p>قیمت(تومان)</p><p  class="coin-price-toman"></p></td>
+                    <td   ><p>تغییرات</p><p class="coin-present"></p></td>
               <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
             </tr>
             <tr class="coin-item" data-coin-name="BNB_USDT" data-request-id="3">
               <td>2</td>
               <td><img src="Img/binancecoin.png" alt=""></td>
               <td>بایننس</td>
-              <td class="coin-price-dollar"></td>
-              <td class="coin-price-toman"></td>
-              <td id="coin-present" class="coin-present"></td>
+        <td ><p class="coin-price-dollar"></p></td>
+              <td ><p  class="coin-price-toman"></p></td>
+               <td   ><p class="coin-present"></p></td> 
+ <td><span onclick="toggleSubTablleRow(this)" class="toggle-row"><i class="fa-solid fa-angle-left"></i></span></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+            <tr class="coin-item-sub" data-coin-name="BNB_USDT" data-request-id="3" >
+              <td></td>
+                    <td ><p>قیمت(تومان)</p><p  class="coin-price-toman"></p></td>
+                    <td   ><p>تغییرات</p><p class="coin-present"></p></td>
               <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
             </tr>
             <tr class="coin-item" data-coin-name="ETH_USDT" data-request-id="2">
               <td>3</td>
               <td><img src="Img/ethereum.png" alt=""></td>
               <td>اتریوم</td>
-              <td class="coin-price-dollar"></td>
-              <td class="coin-price-toman"></td>
-              <td id="coin-present" class="coin-present"></td>
+              <td ><p class="coin-price-dollar"></p></td>
+              <td ><p  class="coin-price-toman"></p></td>
+               <td   ><p class="coin-present"></p></td> 
+ <td><span onclick="toggleSubTablleRow(this)" class="toggle-row"><i class="fa-solid fa-angle-left"></i></span></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+            <tr class="coin-item-sub"  data-coin-name="ETH_USDT" data-request-id="2">
+              <td></td>
+                    <td ><p>قیمت(تومان)</p><p  class="coin-price-toman"></p></td>
+                    <td   ><p>تغییرات</p><p class="coin-present"></p></td>
               <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
             </tr>
             <tr class="coin-item" data-coin-name="BCH_USDT" data-request-id="4">
               <td>4</td>
               <td><img src="Img/bitcoin-cash.png" alt=""></td>
               <td>بیتکوین کش</td>
-              <td class="coin-price-dollar"></td>
-              <td class="coin-price-toman"></td>
-              <td class="coin-present"></td>
+        <td ><p class="coin-price-dollar"></p></td>
+              <td ><p  class="coin-price-toman"></p></td>
+               <td   ><p class="coin-present"></p></td> 
+ <td><span onclick="toggleSubTablleRow(this)" class="toggle-row"><i class="fa-solid fa-angle-left"></i></span></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+            <tr class="coin-item-sub"   data-coin-name="BCH_USDT" data-request-id="4">
+              <td></td>
+                    <td ><p>قیمت(تومان)</p><p  class="coin-price-toman"></p></td>
+                    <td   ><p>تغییرات</p><p class="coin-present"></p></td>
               <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
             </tr>
             <tr class="coin-item" data-coin-name="ADA_USDT" data-request-id="5">
               <td>5</td>
               <td><img src="Img/cardano.png" alt=""></td>
               <td>کاردانو</td>
-              <td class="coin-price-dollar"></td>
-              <td class="coin-price-toman"></td>
-              <td id="coin-present" class="coin-present"></td>
+        <td ><p class="coin-price-dollar"></p></td>
+              <td ><p  class="coin-price-toman"></p></td>
+               <td   ><p class="coin-present"></p></td> 
+ <td><span onclick="toggleSubTablleRow(this)" class="toggle-row"><i class="fa-solid fa-angle-left"></i></span></td>
+              <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
+            </tr>
+            <tr class="coin-item-sub"  data-coin-name="ADA_USDT" data-request-id="5">
+              <td></td>
+                    <td ><p>قیمت(تومان)</p><p  class="coin-price-toman"></p></td>
+                    <td   ><p>تغییرات</p><p class="coin-present"></p></td>
               <td><a class="btn btn-color" href="Trade.html">خرید و فروش</a></td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
+    
   </section>
   <section>
     <div class="container">
@@ -210,6 +248,10 @@
 
   <section>
     <div class="container">
+      <div class="statistics-title">
+        <h4>برخی از آمار های قابل توجه ما</h4>
+        <img src="Img/icons8-statistic-64.png" alt="">
+      </div>
       <div class="statistics">
         <div class="statistics-item">
           <span>200+ هزار</span>
@@ -270,24 +312,7 @@
       </div>
     </div>
   </section>
-  <div class="menu-mobile">
-    <a href="index.html">
-      <i class="fas fa-home"></i>
-      <p>صفحه اصلی</p>
-    </a>
-    <a href="Trade.html">
-      <i class="fas fa-chart-bar"></i>
-      <p>معامله</p>
-    </a>
-    <a href="Market.html">
-      <i class="fas fa-shopping-cart"></i>
-      <p>مارکت</p>
-    </a>
-    <a href="Wallet.html">
-      <i class="fas fa-wallet"></i>
-      <p>کیف پول</p>
-    </a>
-  </div>
+ 
 
   <footer>
     <div class="container">
@@ -355,6 +380,30 @@
     <p class="policy">© تمام حقوق مادی و معنوی این سایت متعلق به کوین بازار است.</p>
     </div>
   </footer>
+  <a class="bottom-toggle" href="javascript:toggleTheme()">
+    <i class="fa fa-moon-o" ></i>
+  </a>
+  <div class="margin-bottom"></div>
+  <div class="menu-mobile">
+    <a href="/index.html">
+      <i class="fas fa-home"></i>
+      <p>صفحه اصلی</p>
+    </a>
+    <a href="/MapMarket.html">
+      <i class="fas fa-chart-bar"></i>
+      <p>نقشه بازار</p>
+    </a>
+    <a href="/Trade.html">
+    
+      <i class="fas fa-shopping-cart"></i>
+      <p>معامله</p>
+    </a>
+   
+    <a href="/Wallet.html">
+      <i class="fas fa-wallet"></i>
+      <p>کیف پول</p>
+    </a>
+  </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://kit.fontawesome.com/088d260400.js" crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
