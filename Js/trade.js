@@ -333,6 +333,14 @@ function addOrder() {
   }
   localStorage.setItem("listOrder", JSON.stringify(listOrder));
   updateUserOrderList();
+  Swal.fire({
+    text: `سفارش یا موفقیت ثبت شد`,
+ 
+    background: `#393a3f`,
+    color: `#e7ffff`,
+    showConfirmButton: false,
+  timer: 500
+  });
 }
 
 function cancelOrder(orderElement) {
@@ -375,8 +383,6 @@ function updateUserOrderList() {
    }
  
 }
-
-
 
 function gatPersianDate(date) {
   const option = {

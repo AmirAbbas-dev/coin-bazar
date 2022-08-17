@@ -3,9 +3,24 @@ const coinNames = ["BTC", "ETH", "BNB", "ADA", "BCH"]
 let ctx = 'doughnutChart';
 var coins = [];
 
-for (const [key, value] of Object.entries(userBalance)) {
+if (userBalance) {
+
+  for (const [key, value] of Object.entries(userBalance)) {
     console.log(value);
 }
+}
+else
+{
+  userBalance = {
+    BTC: 0,
+    BNB: 0,
+    ETH: 0,
+    ADA: 0,
+    BCH: 0
+  }
+  localStorage.setItem("userBalance",JSON.stringify(userBalance));
+}
+
  
 var socketMapMarket = new WebSocket("wss://ws.gate.io/v3/");
 socketMapMarket.onopen = function () {
@@ -36,6 +51,7 @@ function updateDataBalance() {
   $("#balanceAllToman").text(groupDigital((balanceAllPrice * 30000).toFixed()));
   $("#balanceAllDollar").text(groupDigital(balanceAllPrice.toFixed())+"$");
   $("#balanceAllToken").text(balanceAllToken);
+  $(".doughnut-chart").css("display", balanceAllToken ? "block" : "none");
 }
 
 function createChart() {
