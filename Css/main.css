@@ -61,8 +61,8 @@ html {
   scroll-behavior: smooth;
   
 }
-select:focus-visible,
-input:focus-visible {
+select:focus-visible,select:focus,
+input:focus-visible,input:focus {
   outline: none;
 }
 ul {
@@ -443,10 +443,11 @@ table tbody tr{
   width: 70%;
   background-color: var(--white-light-color);
   border-radius: 12px;
-  padding: 7px 15px;
+  padding: 12px 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 1.1rem;
 }
 #buy-tab,
 #sell-tab {
@@ -545,6 +546,8 @@ table tbody tr{
   border-radius: 12px;
   box-shadow: 0px 10px 20px 1px #ffc4125d;
   transition: .5s;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .insert-order>div {
   display: flex;
@@ -699,6 +702,8 @@ table tbody tr{
   flex-direction: row;
   justify-content: space-evenly;
   text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .header-order span {
@@ -804,7 +809,8 @@ width: 70px;
   border-bottom: 1px solid var(--white-light-color);
 }
 .user-orderlist td,.user-orderlist th{
-  font-size: 0.8em;
+  font-size: 0.9rem;
+    font-weight: 600;
 }
 .user-orderlist li{
   width: 100%;
@@ -1083,7 +1089,7 @@ display: flex;
   padding: 0 15px;
 }
 .cta-box{
-  background: url(/Img/Pngtreegeometric\ shapes\ patterns\ vector3553180.png) center 30% ;
+  background: url(/Img/Pngtreegeometric-shapes-patterns.png) center 30% ;
   width: 100%;
   height: 150px;
   border-radius: 20px;
@@ -1154,7 +1160,7 @@ footer{
   display: flex;
 }
 .footer-image img {
-  width: 100px;
+  width: 80px;
   height: 100px;
 }
 .footer .footer-link{
@@ -1329,7 +1335,7 @@ bottom: 0px;
     display: none;
   }
   .user-orderlist{
-    margin: 50px 10px;
+    margin: 0 20px;
   }
   .landing-content{
     flex-basis: 100%;
@@ -1347,7 +1353,9 @@ bottom: 0px;
 .coin-list {
   width: 98%;
 }
- 
+.coin-list::before{
+  content: none;
+}
  .modal-coinlist{
    margin: 0;
 
@@ -1414,10 +1422,15 @@ bottom: 0px;
 }
 @media (max-width: 550px) {
   .user-orderlist table {
-    width: 500px;
+    width: 100%;
       border-spacing: 0;
   }
- 
+  .user-orderlist thead th:nth-child(5),
+  .user-orderlist thead th:nth-child(7),
+  .user-orderlist tbody td:nth-child(5),
+  .user-orderlist tbody td:nth-child(7){
+    display: none;
+  }
   .amount-label{
     margin-top: 40px;
     justify-content:center;
